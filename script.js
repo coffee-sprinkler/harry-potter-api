@@ -18,7 +18,16 @@ const characters = HP_API('').then(data => {
 });
 
 const displayCharacters = data => {
-  data.some(character => {
+  let shouldSkip = false;
+  data.forEach(character => {
+    if (shouldSkip) {
+      return;
+    }
+    if (character.name === 'Argus Filch') {
+      shouldSkip = true;
+      return;
+    }
+
     createCard(character);
   });
 };
