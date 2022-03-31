@@ -14,15 +14,123 @@ header {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: black;
 }
 
-a {
-  text-decoration: none;
+header a {
   color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+  .content {
+    grid-template-columns: repeat(auto-fill, 300px) !important;
+  }
 }
 
 select[name='categories'] {
   width: 20ch;
   padding-inline: 0.5rem;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+option {
+  background: black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 2.5rem 1rem;
+  outline: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.image-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 1rem;
+  border: 2px solid white;
+}
+
+.profile-pic {
+  width: 100%;
+}
+
+.title {
+  margin-block: 1rem;
+  justify-self: center;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.details {
+  width: 80%;
+}
+
+.details-item {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.details-item:last-child {
+  justify-content: center;
+}
+
+.details-item:last-child button {
+  width: 100%;
+  margin-top: 1rem;
+  padding-block: 0.4rem;
+  background: transparent;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: 1px solid whitesmoke;
+}
+
+.details-item:last-child button:hover {
+  color: black;
+  background-color: whitesmoke;
+  transform: translateY(-2px);
+}
+
+.tag {
+  font-style: italic;
+  width: 50%;
+}
+
+.desc {
+  margin-right: auto;
+  text-transform: capitalize;
 }
