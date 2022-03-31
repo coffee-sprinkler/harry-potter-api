@@ -68,9 +68,6 @@ const createCard = data => {
         <span class="tag">ancestry</span>
         <span class="desc">${ancestry}</span>
       </div>
-      <div class="details-item">
-        <button>See more</button>
-      </div>
     </div>
   
   `;
