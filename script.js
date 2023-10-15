@@ -8,7 +8,7 @@ const content = document.querySelector('.content');
 // TODO Harry Potter API
 
 const HP_API = async (categories = '') => {
-  const url = `http://hp-api.herokuapp.com/api/characters/${categories}`;
+  const url = `https://hp-api.onrender.com/api/characters/${categories}`;
   const data = await (await fetch(url)).json();
   return data;
 };
